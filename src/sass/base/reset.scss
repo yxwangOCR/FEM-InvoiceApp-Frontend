@@ -1,6 +1,6 @@
 @use "sass:map";
 @use "@/sass/abstract" as *;
-@use './normalize.scss';
+@use "./normalize.scss";
 
 * {
   margin: 0;
@@ -8,13 +8,12 @@
   font: inherit;
 }
 
-
 button {
   background-color: transparent;
   border: 0;
   cursor: pointer;
 
   &[disabled] {
-    cursor:default;
+    cursor: default;
   }
 }

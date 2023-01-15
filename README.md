@@ -1,9 +1,8 @@
 # README
 
-
 Vite as bundler based react App template. Features including
 
-- jest 
+- jest
 - eslint
 - storybook
 - sass

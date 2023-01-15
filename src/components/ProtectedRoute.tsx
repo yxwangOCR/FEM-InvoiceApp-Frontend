@@ -1,7 +1,7 @@
-import React from 'react';
-import { Navigate } from 'react-router-dom';
+import React from "react";
+import { Navigate } from "react-router-dom";
 
-import { useAuthContext } from './AppProviders';
+import { useAuthContext } from "./AppProviders";
 
 const ProtectedRoute: React.FC<Props> = ({ toPath, children }) => {
   const { user } = useAuthContext();
@@ -10,8 +10,7 @@ const ProtectedRoute: React.FC<Props> = ({ toPath, children }) => {
     return children;
   }
 
-  return <Navigate replace
-    to={toPath} />;
+  return <Navigate replace to={toPath} />;
 };
 
 export default ProtectedRoute;

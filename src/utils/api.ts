@@ -2,8 +2,8 @@ import axios, {
   AxiosInterceptorManager,
   AxiosRequestConfig,
   AxiosResponse,
-} from 'axios';
-import helpers from './helpers';
+} from "axios";
+import helpers from "./helpers";
 
 class Axios {
   public interceptors:

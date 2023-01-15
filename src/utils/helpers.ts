@@ -1,10 +1,10 @@
 const helpers = {
   theme: {
     getThemeMode: () => {
-      return localStorage.getItem('theme') ?? 'dark';
+      return localStorage.getItem("theme") ?? "dark";
     },
     setThemeMode: (mode: string) => {
-      localStorage.setItem('theme', mode);
+      localStorage.setItem("theme", mode);
     },
   },
 };

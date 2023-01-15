@@ -6,7 +6,7 @@ $typography-heading: (heading-1, heading-2, heading-3, heading-4);
 
 $font-weight: (
   regular: 400,
-  semi-bold: 600,
+  medium: 500,
   bold: 700,
 );
 
@@ -40,11 +40,11 @@ $letter-spacing: (
 @mixin body($size) {
   color: map.get($colors, "black1");
   font-size: map.get($map: $font-size, $key: $size);
-  font-weight: 400;
+  font-weight: map.get($map: $font-weight, $key: medium);
   line-height: map.get($map: $line-height, $key: $size);
 
   @if $size == body2 {
-    font-weight: map.get($map: $font-weight, $key: semi-bold);
+    font-weight: map.get($map: $font-weight, $key: medium);
   }
 }
 

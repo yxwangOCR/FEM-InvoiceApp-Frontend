@@ -1,1 +1,1 @@
-export { DetailPage as default } from './DetailPage';
+export { DetailPage as default } from "./DetailPage";

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState } from "react";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function
 const emptyFunc = () => {};

@@ -1,20 +1,19 @@
-import React from 'react';
-import { Navigate } from 'react-router-dom';
+import React from "react";
+import { Navigate } from "react-router-dom";
 
-import LazyWrap from '@/components/LazyWrap';
+import LazyWrap from "@/components/LazyWrap";
 
-const SignInPage = React.lazy(() => import('./SignInPage'));
-const SignUpPage = React.lazy(() => import('./SignUpPage'));
+const SignInPage = React.lazy(() => import("./SignInPage"));
+const SignUpPage = React.lazy(() => import("./SignUpPage"));
 
 const routes = [
   {
-    path: '',
+    path: "",
     index: true,
-    element: <Navigate replace
-      to="/auth/sign-in" />,
+    element: <Navigate replace to="/auth/sign-in" />,
   },
   {
-    path: ':sign-in',
+    path: ":sign-in",
     element: (
       <LazyWrap>
         <SignInPage />
@@ -22,7 +21,7 @@ const routes = [
     ),
   },
   {
-    path: ':sign-up',
+    path: ":sign-up",
     element: (
       <LazyWrap>
         <SignUpPage />

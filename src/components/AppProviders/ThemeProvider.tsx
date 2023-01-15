@@ -1,13 +1,13 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from "react";
 
-import helpers from '@/utils/helpers';
+import helpers from "@/utils/helpers";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function
 const emptyFunc = () => {};
 
 const ThemeContext = React.createContext<ThemeContextType>({
   setMode: emptyFunc,
-  mode: 'light' as ThemeType,
+  mode: "light" as ThemeType,
 });
 
 const ThemeProvider: React.FC<Props> = ({ children }) => {
@@ -16,9 +16,7 @@ const ThemeProvider: React.FC<Props> = ({ children }) => {
   });
 
   useEffect(() => {
-    const prevMode = mode === 'dark'
-      ? 'light'
-      : 'dark';
+    const prevMode = mode === "dark" ? "light" : "dark";
 
     document.body.classList.remove(prevMode);
     document.body.classList.add(mode);
@@ -36,9 +34,7 @@ const ThemeProvider: React.FC<Props> = ({ children }) => {
       <span>mode: {mode} </span>
       <button
         onClick={() => {
-          setMode((mode) => (mode === 'dark'
-            ? 'light'
-            : 'dark'));
+          setMode((mode) => (mode === "dark" ? "light" : "dark"));
         }}
       >
         toggle mode
@@ -52,7 +48,7 @@ export default ThemeProvider;
 
 export const useThemeContext = () => useContext(ThemeContext);
 
-export type ThemeType = 'dark' | 'light';
+export type ThemeType = "dark" | "light";
 export type ThemeContextType = {
   mode: ThemeType;
   setMode: (theme: ThemeType) => void;

@@ -211,5 +211,5 @@ export default {
     "@/services/(.*)": "<rootDir>/src/services/$1",
   },
   moduleDirectories: ["node_modules", "src"],
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
 };
