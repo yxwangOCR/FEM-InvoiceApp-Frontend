@@ -5,7 +5,6 @@ import authRoutes from '@/pages/auth';
 import invoicesRoutes from '@/pages/invoices';
 import NotFoundPage from '@/pages/NotFoundPage';
 
-
 const App: React.FC = () => {
   return useRoutes([
     {

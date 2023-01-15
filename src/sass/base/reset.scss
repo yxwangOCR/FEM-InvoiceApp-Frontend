@@ -1,4 +1,12 @@
-@use './normalize.scss';
+@use "sass:map";
+@use "@/sass/abstract" as *;
+@use "./normalize.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
 
 button {
   background-color: transparent;
@@ -6,6 +14,6 @@ button {
   cursor: pointer;
 
   &[disabled] {
-    cursor:default;
+    cursor: default;
   }
 }
