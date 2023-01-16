@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import "./style.scss";
+import './style.scss';
 
 export const DetailPage: React.FC<Props> = () => {
   return <div className="detail-page">Invoice Detail page</div>;

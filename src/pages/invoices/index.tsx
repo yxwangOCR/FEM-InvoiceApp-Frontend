@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 
-import LazyWrap from "@/components/LazyWrap";
-import ProtectedRoute from "@/components/ProtectedRoute";
+import LazyWrap from '@/components/LazyWrap';
+import ProtectedRoute from '@/components/ProtectedRoute';
 
-const ListPage = React.lazy(() => import("./ListPage"));
-const DetailPage = React.lazy(() => import("./DetailPage"));
+const ListPage = React.lazy(() => import('./ListPage'));
+const DetailPage = React.lazy(() => import('./DetailPage'));
 
 const routes = [
   {
-    path: "",
+    path: '',
     index: true,
     element: (
       <ProtectedRoute toPath="/auth">
@@ -19,7 +19,7 @@ const routes = [
     ),
   },
   {
-    path: ":invoiceId",
+    path: ':invoiceId',
     element: (
       <ProtectedRoute toPath="/auth">
         <LazyWrap>

@@ -1,29 +1,26 @@
-import React from "react";
-import { Navigate, useRoutes } from "react-router-dom";
+import React from 'react';
+import { Navigate, useRoutes } from 'react-router-dom';
 
-<<<<<<< HEAD
-import authRoutes from "@/pages/auth";
-import invoicesRoutes from "@/pages/invoices";
-import NotFoundPage from "@/pages/NotFoundPage";
+import authRoutes from '@/pages/auth';
+import invoicesRoutes from '@/pages/invoices';
+import NotFoundPage from '@/pages/NotFoundPage';
 
-=======
->>>>>>> upstream/main
 const App: React.FC = () => {
   return useRoutes([
     {
-      path: "/",
+      path: '/',
       element: <Navigate to="/invoices" />,
     },
     {
-      path: "/invoices",
+      path: '/invoices',
       children: invoicesRoutes,
     },
     {
-      path: "/auth",
+      path: '/auth',
       children: authRoutes,
     },
     {
-      path: "*",
+      path: '*',
       element: <NotFoundPage />,
     },
   ]);

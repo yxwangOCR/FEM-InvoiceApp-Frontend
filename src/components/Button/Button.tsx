@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import "./Button.scss";
+import './Button.scss';
 
 export const Button: React.FC<Props> = ({ children }) => {
   return <button className="rounded button">{children}</button>;
