@@ -6,6 +6,7 @@ module.exports = {
   },
   settings: {
     react: {
+<<<<<<< HEAD
       version: "detect",
     },
   },
@@ -16,6 +17,18 @@ module.exports = {
     "plugin:storybook/recommended",
   ],
   ignorePatterns: ["./storybook", "vite.*.ts", "vite-env.d.ts", "./vite"],
+=======
+      version: 'detect',
+    },
+  },
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:storybook/recommended',
+  ],
+  ignorePatterns: ['./storybook', 'vite.*.ts', 'vite-env.d.ts', './vite'],
+>>>>>>> upstream/main
   overrides: [],
   parser: "@typescript-eslint/parser",
   parserOptions: {
@@ -23,12 +36,21 @@ module.exports = {
     sourceType: "module",
   },
   plugins: [
+<<<<<<< HEAD
     "@typescript-eslint",
     "eslint-plugin-import-order",
     "eslint-plugin-import",
     "eslint-plugin-react-hooks",
     "react",
     "typescript-sort-keys",
+=======
+    '@typescript-eslint',
+    'eslint-plugin-import-order',
+    'eslint-plugin-import',
+    'eslint-plugin-react-hooks',
+    'react',
+    'typescript-sort-keys',
+>>>>>>> upstream/main
   ],
   rules: {
     "additional-rule": "off",

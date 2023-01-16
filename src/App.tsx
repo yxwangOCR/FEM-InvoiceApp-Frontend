@@ -1,10 +1,13 @@
 import React from "react";
 import { Navigate, useRoutes } from "react-router-dom";
 
+<<<<<<< HEAD
 import authRoutes from "@/pages/auth";
 import invoicesRoutes from "@/pages/invoices";
 import NotFoundPage from "@/pages/NotFoundPage";
 
+=======
+>>>>>>> upstream/main
 const App: React.FC = () => {
   return useRoutes([
     {
