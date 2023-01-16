@@ -1,7 +1,7 @@
 @use "sass:map";
 
 $grid-breakpoints: (
-  xs: 0,
+  xs: 320px,
   sm: 576px,
   md: 768px,
   lg: 992px,
@@ -39,7 +39,7 @@ $grid-breakpoints: (
   }
 }
 
-@mixin xlg {
+@mixin xxl {
   @media screen and (min-width: map.get($grid-breakpoints, "xl")) {
     @content;
   }
