@@ -1,5 +1,7 @@
 @use "sass:map";
 @use "@/sass/abstract" as *;
+@forward "./button";
+@forward "./input";
 
 .flex-center-between {
   display: flex;
