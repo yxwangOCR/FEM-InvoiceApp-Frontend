@@ -1,14 +1,6 @@
 @use "sass:map";
 @use "@/sass/abstract" as *;
 
-.border-rounded {
-   @each $name, $value in $border-radius {
-    &--#{$name} {
-      border-radius: $value;
-    }
-  }
-}
-
 .flex-center-between {
   display: flex;
   align-items: center;
