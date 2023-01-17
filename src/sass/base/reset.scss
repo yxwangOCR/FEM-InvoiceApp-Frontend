@@ -8,6 +8,17 @@
   font: inherit;
 }
 
+// To help scroll top top smoothly
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 button {
   background-color: transparent;
   border: 0;
@@ -16,4 +27,9 @@ button {
   &[disabled] {
     cursor: default;
   }
+}
+
+ul,
+li {
+  list-style: none;
 }
