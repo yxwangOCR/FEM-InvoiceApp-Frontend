@@ -1,0 +1,104 @@
+@use "sass:map";
+@use "@/sass/abstract" as *;
+
+$header-mobile-block-size: 72px;
+$header-tablet-block-size: 80px;
+$header-desktop-width: 104px;
+
+.layout {
+  min-height: 100%;
+  &__header {
+    height: $header-mobile-block-size;
+    margin-bottom: 32px;
+    position: sticky;
+    top: 0;
+    z-index: map.get($z-index, "sticky");
+
+    &-logo {
+      background-color: map.get($colors, "purple1");
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      height: $header-mobile-block-size;
+      justify-content: center;
+      width: $header-mobile-block-size;
+    }
+
+    &-toggle {
+      position: relative;
+      width: $header-mobile-block-size;
+      height: $header-mobile-block-size;
+
+      &::after {
+        // @todo: where to find this color
+        background-color: #494e6e;
+        bottom: 0;
+        content: "";
+        height: 100%;
+        position: absolute;
+        right: 0;
+        width: 1px;
+      }
+    }
+  }
+  &__main {
+    margin: 0 map.get($content-margin, "mobile");
+  }
+
+  @include media-breakpoint-up(md) {
+    &__header {
+      height: $header-tablet-block-size;
+      margin-bottom: 56px;
+      &-logo {
+        height: $header-tablet-block-size;
+        width: $header-tablet-block-size;
+      }
+      &-toggle {
+        height: $header-tablet-block-size;
+        width: $header-tablet-block-size;
+      }
+    }
+    &__main {
+      max-width: 672px;
+      margin: 0 auto;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    position: relative;
+    &__header {
+      flex-direction: column;
+      height: 100%;
+      left: 0;
+      margin-bottom: 0;
+      position: fixed;
+      width: $header-desktop-width;
+      &-content {
+        flex-direction: column;
+      }
+      &-logo {
+        height: $header-desktop-width;
+        width: $header-desktop-width;
+      }
+      &-toggle {
+        height: 88px;
+        width: $header-desktop-width;
+        &::after {
+          height: 1px;
+          width: 100%;
+        }
+      }
+    }
+    &__main {
+      max-width: 730px;
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    max-width: map.get($grid-breakpoints, "xl");
+    margin: 0 auto;
+
+    &__header {
+      position: absolute;
+    }
+  }
+}

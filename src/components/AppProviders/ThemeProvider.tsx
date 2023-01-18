@@ -2,11 +2,9 @@ import React, { useContext, useEffect, useState } from 'react';
 
 import helpers from '@/utils/helpers';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-function
-const emptyFunc = () => {};
-
 const ThemeContext = React.createContext<ThemeContextType>({
-  setMode: emptyFunc,
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  toggleMode: () => { },
   mode: 'light' as ThemeType,
 });
 
@@ -15,13 +13,14 @@ const ThemeProvider: React.FC<Props> = ({ children }) => {
     return helpers.theme.getThemeMode() as ThemeType;
   });
 
-  useEffect(() => {
-    const prevMode = mode === 'dark'
+  const toggleMode = () => {
+    setMode((mode === 'dark')
       ? 'light'
-      : 'dark';
+      : 'dark');
+  };
 
-    document.body.classList.remove(prevMode);
-    document.body.classList.add(mode);
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme-mode', mode);
 
     helpers.theme.setThemeMode(mode);
   }, [mode]);
@@ -30,19 +29,9 @@ const ThemeProvider: React.FC<Props> = ({ children }) => {
     <ThemeContext.Provider
       value={{
         mode,
-        setMode,
+        toggleMode,
       }}
     >
-      <span>mode: {mode} </span>
-      <button
-        onClick={() => {
-          setMode((mode) => (mode === 'dark'
-            ? 'light'
-            : 'dark'));
-        }}
-      >
-        toggle mode
-      </button>
       {children}
     </ThemeContext.Provider>
   );
@@ -55,7 +44,7 @@ export const useThemeContext = () => useContext(ThemeContext);
 export type ThemeType = 'dark' | 'light';
 export type ThemeContextType = {
   mode: ThemeType;
-  setMode: (theme: ThemeType) => void;
+  toggleMode: () => void;
 };
 
 interface Props {
