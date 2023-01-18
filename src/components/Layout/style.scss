@@ -44,7 +44,7 @@ $header-desktop-width: 104px;
     margin: 0 map.get($content-margin, "mobile");
   }
 
-  @include md {
+  @include media-breakpoint-up(md) {
     &__header {
       height: $header-tablet-block-size;
       margin-bottom: 56px;
@@ -63,7 +63,7 @@ $header-desktop-width: 104px;
     }
   }
 
-  @include lg {
+  @include media-breakpoint-up(lg) {
     position: relative;
     &__header {
       flex-direction: column;
@@ -90,6 +90,15 @@ $header-desktop-width: 104px;
     }
     &__main {
       max-width: 730px;
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    max-width: map.get($grid-breakpoints, "xl");
+    margin: 0 auto;
+
+    &__header {
+      position: absolute;
     }
   }
 }

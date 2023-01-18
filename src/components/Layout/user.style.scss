@@ -14,12 +14,12 @@
     width: 32px;
   }
 
-  @include md {
+  @include media-breakpoint-only(md) {
     width: $header-tablet-block-size;
     height: $header-tablet-block-size;
   }
 
-  @include lg {
+  @include media-breakpoint-only(lg) {
     width: $header-desktop-width;
     height: 88px;
     img {
