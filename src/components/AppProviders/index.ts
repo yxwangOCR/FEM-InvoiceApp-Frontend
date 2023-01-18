@@ -4,3 +4,5 @@ export type { AuthContextType } from './AuthProvider';
 export { default as queryClient } from './queryClient';
 
 export { default } from './AppProviders';
+
+export * from './ThemeProvider';

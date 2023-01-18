@@ -1,0 +1,30 @@
+@use "sass:map";
+@use "@/sass/abstract" as *;
+@use "./style.scss" as *;
+
+.user {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: $header-mobile-block-size;
+  width: $header-mobile-block-size;
+
+  img {
+    border-radius: 50%;
+    width: 32px;
+  }
+
+  @include md {
+    width: $header-tablet-block-size;
+    height: $header-tablet-block-size;
+  }
+
+  @include lg {
+    width: $header-desktop-width;
+    height: 88px;
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

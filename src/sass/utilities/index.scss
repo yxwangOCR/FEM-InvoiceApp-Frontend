@@ -1,20 +1,26 @@
 @use "sass:map";
 @use "@/sass/abstract" as *;
 
-.flex-center-between {
-  display: flex;
+.flex-center {
   align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.flex-center-between {
+  align-items: center;
+  display: flex;
   justify-content: space-between;
 }
 
 .flex-center-end {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: flex-end;
 }
 
 .flex-center-start {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: flex-start;
 }
