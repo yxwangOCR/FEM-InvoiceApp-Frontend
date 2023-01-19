@@ -1,0 +1,28 @@
+@use "sass:map";
+@use "@/sass/abstract" as *;
+
+.invoice-status {
+  height: 40px;
+  gap: 8px;
+  text-transform: capitalize;
+  width: 104px;
+
+  &__dot {
+    background-color: currentColor;
+    border-radius: 50%;
+    height: map.get($round, "large");
+    width: map.get($round, "large");
+  }
+  &--draft {
+    background-color: var(--clr-invoice-draft-background);
+    color: var(--clr-invoice-draft-text);
+  }
+  &--paid {
+    background-color: var(--clr-invoice-paid-background);
+    color: var(--clr-invoice-paid-text);
+  }
+  &--pending {
+    background-color: var(--clr-invoice-pending-background);
+    color: var(--clr-invoice-pending-text);
+  }
+}

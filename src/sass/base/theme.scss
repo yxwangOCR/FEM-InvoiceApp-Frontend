@@ -1,0 +1,29 @@
+@use "sass:map";
+@use "@/sass/abstract" as *;
+@use "./normalize.scss";
+
+:root {
+  --clr-body-background: #{map.get($colors, "gray6")};
+  --clr-content-background: #{map.get($colors, "white")};
+  --clr-content-heading: #{map.get($colors, "dark1")};
+  --clr-content-text: #{map.get($colors, "gray1")};
+  --clr-invoice-pending-text: #{map.get($colors, "yellow1")};
+  --clr-invoice-pending-background: #{map.get($colors, "yellow2")};
+  --clr-invoice-paid-text: #{map.get($colors, "green1")};
+  --clr-invoice-paid-background: #{map.get($colors, "green2")};
+  --clr-invoice-draft-text: #{map.get($colors, "dark4")};
+  --clr-invoice-draft-background: #{map.get($colors, "dark5")};
+}
+
+html[data-theme-mode="dark"] {
+  --clr-body-background: #{map.get($colors, "dark2")};
+  --clr-content-background: #{map.get($colors, "dark3")};
+  --clr-content-heading: #{map.get($colors, "white")};
+  --clr-content-text: #{map.get($colors, "gray4")};
+  --clr-invoice-draft-text: #{map.get($colors, "gray4")};
+  --clr-invoice-draft-background: #{map.get($colors, "gray5")};
+}
+
+body {
+  background-color: var(--clr-body-background);
+}

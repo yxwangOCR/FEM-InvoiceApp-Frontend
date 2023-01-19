@@ -3,6 +3,29 @@
 @forward "./button";
 @forward "./input";
 
+// the main element that holds content
+// background color adjusts based on theme mode
+.content-block {
+  background-color: var(--clr-content-background);
+  border-radius: map.get($round, "large");
+  box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+  color: var(--clr-content-text);
+}
+
+.fw-bold {
+  font-weight: map.get($font-weight, "bold");
+}
+.fw-medium {
+  font-weight: map.get($font-weight, "medium");
+}
+
+.rounded {
+  border-radius: map.get($round, "small");
+  &--large {
+    border-radius: map.get($round, "large");
+  }
+}
+
 .flex-center {
   align-items: center;
   display: flex;

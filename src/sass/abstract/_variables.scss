@@ -1,0 +1,30 @@
+// ALL THE COLORS ORGANIZED BY SASS MAP
+$colors: (
+  dark1: #0c0e16,
+  dark2: #141625,
+  dark3: #1e2139,
+  dark4: rgba(55, 59, 83, 1),
+  dark5: rgba(55, 59, 83, 0.06),
+  dark6: #252945,
+  gray1: #7e88c3,
+  gray2: #858bb2,
+  gray3: #888eb0,
+  gray4: rgb(223, 227, 250),
+  gray5: rgb(223, 227, 250, 0.06),
+  gray6: #f9fafe,
+  gray7: #f2f2fe,
+  green1: rgb(51, 214, 159),
+  green2: rgba(51, 214, 159, 0.06),
+  red1: #ec5757,
+  red2: #ff9797,
+  purple1: #7c5dfa,
+  purple2: #9277ff,
+  yellow1: rgb(255, 143, 0),
+  yellow2: rgba(255, 143, 0, 0.06),
+  white: #fff,
+);
+
+$round: (
+  large: 8px,
+  small: 6px,
+);
