@@ -1,0 +1,64 @@
+@use "sass:map";
+@use "@/sass/abstract" as *;
+
+.invoice {
+  $self: &;
+
+  // Shared styles for both mobile and tablet layout
+  &__info {
+    &-amount {
+      @include typography-heading(heading-3);
+      color: var(--clr-content-heading);
+    }
+    &-date {
+      @include typography-body(body-1);
+      color: var(--clr-content-text);
+      display: block;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__no {
+    @include typography-heading(heading-4);
+    color: var(--clr-content-heading);
+
+    &-prefix {
+      color: var(--clr-content-text);
+      margin-right: 2px;
+    }
+  }
+
+  // mobile layout style
+  &--mobile {
+    & > div:not(:last-child) {
+      margin-bottom: map.get($content-margin, "mobile");
+    }
+  }
+
+  // tablet and above layout style
+  &--tablet {
+    #{$self + __client-name} {
+      width: 110px;
+    }
+
+    #{$self + __info} {
+      &-amount {
+        width: 120px;
+        margin-right: 40px;
+        text-align: right;
+      }
+      &-date {
+        margin-bottom: 0;
+        width: 110px;
+      }
+    }
+
+    #{$self + __no} {
+      margin-right: 14px;
+    }
+
+    #{$self + __status} {
+      gap: 20px;
+    }
+  }
+}

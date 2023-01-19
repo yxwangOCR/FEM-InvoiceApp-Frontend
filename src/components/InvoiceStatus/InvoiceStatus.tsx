@@ -10,6 +10,7 @@ export const InvoiceStatus: React.FC<Props> = ({ status }) => {
         'invoice-status',
         `invoice-status--${status}`,
         'flex-center',
+        'fw-bold',
         'rounded--large'
       )}
     >

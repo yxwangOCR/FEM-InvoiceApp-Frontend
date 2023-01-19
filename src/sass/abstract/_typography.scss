@@ -1,7 +1,7 @@
 @use "sass:map";
 @use "./colors" as *;
 
-$typography-body: (body1, body2);
+$typography-body: (body-1, body-2);
 $typography-heading: (heading-1, heading-2, heading-3, heading-4);
 
 $font-weight: (
@@ -11,39 +11,38 @@ $font-weight: (
 );
 
 $font-size: (
-  body1: 12px,
-  body2: 11px,
-  title1: 32px,
-  title2: 20px,
-  title3: 16px,
-  title4: 12px,
+  body-1: 12px,
+  body-2: 11px,
+  heading-1: 32px,
+  heading-2: 20px,
+  heading-3: 16px,
+  heading-4: 12px,
 );
 
 $line-height: (
-  body1: 15px,
-  body2: 18px,
-  title1: 36px,
-  title2: 22px,
-  title3: 24px,
-  title4: 15px,
+  body-1: 15px,
+  body-2: 18px,
+  heading-1: 36px,
+  heading-2: 22px,
+  heading-3: 24px,
+  heading-4: 15px,
 );
 
 $letter-spacing: (
-  body1: -0.25px,
-  body2: -0.23px,
-  title1: -0.1px,
-  title2: -0.63px,
-  title3: -0.8px,
-  title4: -0.25px,
+  body-1: -0.25px,
+  body-2: -0.23px,
+  heading-1: -0.1px,
+  heading-2: -0.63px,
+  heading-3: -0.8px,
+  heading-4: -0.25px,
 );
 
 @mixin body($size) {
-  color: map.get($colors, "black1");
   font-size: map.get($map: $font-size, $key: $size);
   font-weight: map.get($map: $font-weight, $key: medium);
   line-height: map.get($map: $line-height, $key: $size);
 
-  @if $size == body2 {
+  @if $size == body-2 {
     font-weight: map.get($map: $font-weight, $key: medium);
   }
 }

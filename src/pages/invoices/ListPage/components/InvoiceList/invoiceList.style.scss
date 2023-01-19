@@ -1,0 +1,33 @@
+@use "sass:map";
+@use "@/sass/abstract" as *;
+
+.invoice-list {
+  &__item {
+    margin-bottom: 16px;
+  }
+  &__to-detail {
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    display: block;
+    text-decoration: none;
+    padding: map.get($content-margin, "mobile");
+    transition: all 0.2s ease-in-out;
+
+    &:focus,
+    &:hover {
+      border: 1px solid map.get($colors, "purple1");
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    &__to-detail {
+      padding: 16px map.get($content-margin, "mobile");
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    &__to-detail {
+      padding: 16px 32px;
+    }
+  }
+}
